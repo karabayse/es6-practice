@@ -238,3 +238,58 @@ const restaurant = {
 }
 
 console.log(restaurant.openRestaurant());
+
+
+
+
+// Getters and Setters
+let restaurant = {
+  _name: 'Italian Bistro',
+  _seatingCapacity: 120,
+  _hasDineInSpecial: true,
+  _entrees: ['Penne alla Bolognese', 'Chicken Cacciatore', 'Linguine pesto'],
+
+  set seatingCapacity(newCapacity) {
+      if (typeof newCapacity === 'number') {
+        this._seatingCapacity = newCapacity;
+      console.log(`${newCapacity} is valid input.`);
+    } else {
+        console.log(`Change ${newCapacity} to a number.`);
+    }
+}
+
+// The code below calls the setter method:
+// Sets the _seatingCapacity value to 150
+restaurant.seatingCapacity = 150;
+
+//The output would be:  150 is valid input.
+
+
+
+let restaurant = {
+  _name: 'Italian Bistro',
+  _seatingCapacity: 120,
+  _hasDineInSpecial: true,
+  _entrees: ['Penne alla Bolognese', 'Chicken Cacciatore', 'Linguine pesto'],
+
+  set seatingCapacity(seatingCapacity) {
+      if (typeOf newCapacity === 'number') {
+        this._seatingCapacity = newCapacity;
+    } else {
+        console.log(`Change ${newCapacity} to a number.`)
+    }
+  },
+
+get seatingCapacity() {
+      console.log(`There are ${this._seatingCapacity} seats at Italian Bistro.`);
+      return this._seatingCapacity;
+  }
+}
+
+// In the example above, the getter method (get seatingCapacity()) logs something to the console and returns the value saved to _seatingCapacity. We call the getter method the same way we would access a property without a method:
+
+restaurant.seatingCapacity = 150;
+const seats = restaurant.seatingCapacity;
+
+// In this example we set the seatingCapacity to 150, then call the getter method using restaurant.seatingCapacity and save the result to a variable called seats. The getter will also log the following line of code to the console:
+// There are 150 seats at Italian Bistro.
