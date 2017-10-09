@@ -187,7 +187,7 @@ console.log(person.hobbies);
 
 
 
-// Methods
+// METHODS
 const restaurant = {
   name: 'Italian Bistro',
   seatingCapacity: 120,
@@ -242,7 +242,7 @@ console.log(restaurant.openRestaurant());
 
 
 
-// Getters and Setters
+// GETTERS AND SETTERS
 let restaurant = {
   _name: 'Italian Bistro',
   _seatingCapacity: 120,
@@ -293,3 +293,49 @@ const seats = restaurant.seatingCapacity;
 
 // In this example we set the seatingCapacity to 150, then call the getter method using restaurant.seatingCapacity and save the result to a variable called seats. The getter will also log the following line of code to the console:
 // There are 150 seats at Italian Bistro.
+
+
+
+
+// CLASSES
+let halley = {
+  _name: 'Halley',
+  _behavior: 0,
+
+  get name() {
+    return this._name;
+  },
+
+  get behavior() {
+    return this._behavior;
+  },
+
+  incrementBehavior() {
+    this._behavior++;
+  }
+}
+
+class Dog {
+  constructor(name) {
+    this._name = name;
+    this._behavior = 0;
+  }
+
+  get name() {
+    return this._name;
+  }
+  get behavior() {
+    return this._behavior;
+  }
+
+  incrementBehavior() {
+    this._behavior ++;
+  }
+}
+
+const halley = new Dog('Halley');
+console.log(halley.name); // Print name value to console
+console.log(halley.behavior); // Print behavior value to console
+halley.incrementBehavior(); // Add one to behavior
+console.log(halley.name); // Print name value to console
+console.log(halley.behavior); // Print behavior value to console
