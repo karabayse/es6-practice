@@ -339,3 +339,31 @@ console.log(halley.behavior); // Print behavior value to console
 halley.incrementBehavior(); // Add one to behavior
 console.log(halley.name); // Print name value to console
 console.log(halley.behavior); // Print behavior value to console
+
+
+
+// CONSTRUCTORS
+class Surgeon {
+  constructor(name, department) {
+    this._name = name;
+    this._department = department;
+    this._remainingVacationDays = 20;
+  }
+
+  get name() {
+    return this._name;
+  }
+
+  get department() {
+    return this._department;
+  }
+// Under the remainingVacationDays getter, create a method called takeVacationDays that accepts one argument named daysOff.
+// Inside of the method, subtract daysOff from the number saved to _remainingVacationDays. Set _remainingVacationDays to the result.
+  get remainingVacationDays() {
+    return this._remainingVacationDays;
+  }
+
+  takeVacationDays(daysOff) {
+    this._remainingVacationDays -= daysOff;
+  }
+}
