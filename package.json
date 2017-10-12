@@ -1,0 +1,19 @@
+{
+  "name": "es6-practice",
+  "version": "1.0.0",
+  "description": "ES6 Practice",
+  "main": "codecademy-es6.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karabayse/es6-practice.git"
+  },
+  "author": "Kara Bayse",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karabayse/es6-practice/issues"
+  },
+  "homepage": "https://github.com/karabayse/es6-practice#readme"
+}
