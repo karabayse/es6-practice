@@ -414,3 +414,49 @@ class Animal {
     return names[randomNumber];
   }
 }
+
+
+
+// MODULES - export, require
+let Menu = {};
+Menu.specialty = "Roasted Beet Burger with Mint Sauce";
+
+module.exports = Menu;
+
+
+
+let Menu = {};
+
+module.exports = {
+  specialty: "Roasted Beet Burger with Mint Sauce",
+  getSpecialty: function() {
+    return this.specialty;
+  }
+};
+
+
+// default export
+let Airplane = {};
+
+Airplane.availableAirplanes = [
+  {
+    name: 'AeroJet',
+  	fuelCapacity: 800
+  },
+  {name: 'SkyJet',
+  fuelCapacity: 500
+  }
+];
+
+export default Airplane;
+
+
+
+// named export
+let specialty = '';
+function isVegetarian() {
+};
+function isLowSodium() {
+};
+// variable followed by isVegetarian function object
+export { specialty, isVegetarian };
