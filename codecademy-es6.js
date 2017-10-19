@@ -540,3 +540,45 @@ xhr.onreadystatechange = function() {
 };
 xhr.open('POST', url);
 xhr.send(data);
+
+
+
+
+// XHR GET REQUESTS
+// Include data for accessing Google APIs
+const apiKey = '  ';
+const projection = 'FULL';
+
+// Some page elements
+
+const $inputField = $('#input');
+const $expandButton = $('#expand');
+const $shortenButton = $('#shorten');
+const $responseField = $('#responseField');
+
+// AJAX functions
+
+function expandUrl() {
+
+}
+
+function shortenUrl() {
+
+}
+
+function expand() {
+  $responseField.empty();
+  expandUrl();
+  return false;
+}
+
+function shorten() {
+  $responseField.empty();
+  shortenUrl();
+  return false;
+}
+
+// Call functions on submit
+
+$expandButton.click(expand);
+$shortenButton.click(shorten);
