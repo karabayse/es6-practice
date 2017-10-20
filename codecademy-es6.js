@@ -559,7 +559,16 @@ const $responseField = $('#responseField');
 // AJAX functions
 
 function expandUrl() {
-
+  const urlToExpand = url +
+        '?key=' + apiKey +
+        '&shortUrl=' + $inputField.val();
+  const xhr = new XMLHttpRequest();
+  xhr.responseType = 'json';
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      console.log(xhr.response);
+      $responseField.append('<p>Your expanded url is: </p><p>' + xhr.response.longUrl + '</p>');
+  }
 }
 
 function shortenUrl() {
